@@ -2,15 +2,18 @@ package pt.ipbeja.pdm2.cocktailv1.Fragments;
 
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import pt.ipbeja.pdm2.cocktailv1.Data;
 import pt.ipbeja.pdm2.cocktailv1.DataBase;
+import pt.ipbeja.pdm2.cocktailv1.MainActivity;
 import pt.ipbeja.pdm2.cocktailv1.Model.Cocktail;
 import pt.ipbeja.pdm2.cocktailv1.Model.DataInterface;
 import pt.ipbeja.pdm2.cocktailv1.R;
@@ -34,7 +37,7 @@ public class Cocktail_info extends Fragment {
 
        db = new DataBase(this.getContext());
 
-//        int position = getArguments().getInt("position");
+
 
 
         if (data != null) {
@@ -45,7 +48,11 @@ public class Cocktail_info extends Fragment {
                 TextView txtTitle = (TextView) view.findViewById(R.id.txtinfoTitle);
 
                 txtTitle.setText(cocktail.getCocktailTitle());
-
+                ImageView imageView = (ImageView) view.findViewById(R.id.imgViewinfo);
+                String ImageName = cocktail.getCocktailTitle();
+                String name = ImageName.replaceAll("\\s", "").toLowerCase();
+                Context ctx = getContext();
+                imageView.setImageDrawable(getResources().getDrawable(ctx.getResources().getIdentifier(name, "drawable", ctx.getPackageName())));
 
                     TextView txtIngradients = (TextView) view.findViewById(R.id.txtIngredients);
                     txtIngradients.setText(cocktail.getCocktailIngre());

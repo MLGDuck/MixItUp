@@ -81,6 +81,14 @@
             android:layout_marginLeft="20dp"
             android:textColor="@android:color/black" />
 
+        <Button
+            android:text="Take a Pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnpic"
+            android:layout_weight="1"
+            android:onClick="photo_onClick"
+            android:layout_gravity="right" />
 
 
     </LinearLayout>

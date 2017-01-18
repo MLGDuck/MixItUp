@@ -70,9 +70,6 @@ public class Cocktail_list extends Fragment {
 
 
 
-        //this.db = new DBHelper(DishCategoryFragment.this.getContext());
-
-        //this.categories = this.db.getAllCategories();
 
         db = new DataBase(this.getContext());
 

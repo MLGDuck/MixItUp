@@ -44,8 +44,6 @@ public class MainActivity extends FragmentActivity implements  Cocktail_list.OnC
     private ArrayList<String> cocktailtile = null;
     private Cocktail cocktail = null;
     private final int REQUEST_IMAGE_CAPTURE = 1;
-    private final int MY_PERMISSIONS_REQUEST_CAMERA = 2;
-    private final int MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE = 3;
     String mCurrentPhotoPath;
 
 
@@ -57,7 +55,7 @@ public class MainActivity extends FragmentActivity implements  Cocktail_list.OnC
 
         dataBase = new DataBase(this);
         this.insertdatabase();
-        this.cocktailtile = (ArrayList<String>) dataBase.getAllCocktailsTitles();
+       // this.cocktailtile = (ArrayList<String>) dataBase.getAllCocktailsTitles();
         //this.cocktail= dataBase.GetCocktail();
 
 

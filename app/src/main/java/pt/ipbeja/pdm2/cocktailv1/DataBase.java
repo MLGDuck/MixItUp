@@ -17,7 +17,7 @@ import pt.ipbeja.pdm2.cocktailv1.Model.Cocktail;
 
 public class DataBase extends SQLiteOpenHelper {
     private static final String DB_FILENAME = "Cocktails.db";
-    private static int DB_VERSION = 28;
+    private static int DB_VERSION = 56;
     private static final SQLiteDatabase.CursorFactory factory = null;
 
     private static final int T_COCKTAIL = 0;

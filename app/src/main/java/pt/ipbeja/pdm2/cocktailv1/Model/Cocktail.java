@@ -12,7 +12,7 @@ public class Cocktail implements Serializable {
     private String cocktailTitle;
     private String cocktailIngre;
     private String cocktailPrep;
-    private Integer cocktailimg;
+
 
     public Cocktail(int cocktailId, String cocktailTitle, String cocktailIngre, String cocktailPrep) {
         this.cocktailId = cocktailId;
@@ -20,14 +20,6 @@ public class Cocktail implements Serializable {
         this.cocktailIngre = cocktailIngre;
         this.cocktailPrep = cocktailPrep;
 
-    }
-
-    public Cocktail(int cocktailId, String cocktailTitle, String cocktailIngre, String cocktailPrep, Integer cocktailimg) {
-        this.cocktailId = cocktailId;
-        this.cocktailTitle = cocktailTitle;
-        this.cocktailIngre = cocktailIngre;
-        this.cocktailPrep = cocktailPrep;
-        this.cocktailimg = cocktailimg;
     }
 
 
@@ -63,11 +55,4 @@ public class Cocktail implements Serializable {
         this.cocktailPrep = cocktailPrep;
     }
 
-    public Integer getCocktailimg() {
-        return cocktailimg;
-    }
-
-    public void setCocktailimg(Integer cocktailimg) {
-        this.cocktailimg = cocktailimg;
-    }
 }
